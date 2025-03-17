@@ -1,0 +1,43 @@
+﻿@model UpdateFooterAddressDto
+
+@{
+    ViewData["Title"] = "UpdateFooterAddress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Yeni Adres Bilgisi Girişi</h4>
+                        <p class="card-subtitle mb-4">Adres alanına ait bilgileri aşağıdaki panelden girebilirsiniz.</p>
+                        <form method="post">
+                            <input type="hidden" asp-for="FooterAddressID" />
+                            <div class="form-group">
+                                <label>Adres</label>
+                                <input type="text" class="form-control" placeholder="Adres Bilgisini Giriniz" asp-for="Address">
+                            </div>
+                            <div class="form-group">
+                                <label>Açıklama</label>
+                                <input type="text" class="form-control" placeholder="Açıklamayı Giriniz" asp-for="Description">
+                            </div>
+                            <div class="form-group">
+                                <label>Telefon Numarası</label>
+                                <input type="tel" class="form-control" placeholder="Telefon Numarasını Giriniz" asp-for="Phone">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Adresi</label>
+                                <input type="email" class="form-control" placeholder="Mail Adresini Giriniz" asp-for="Email">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Adresi Kaydet</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

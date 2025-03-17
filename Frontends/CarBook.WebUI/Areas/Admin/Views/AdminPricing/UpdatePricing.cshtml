@@ -1,0 +1,37 @@
+﻿@model UpdatePricingDto
+
+@{
+    ViewData["Title"] = "UpdatePricing";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title"> Ödeme Türü Güncelleme Sayfası</h4>
+                <p class="card-subtitle mb-4">Ödeme Türü İle İlgili Temel Özellikleri Eksiksiz Doldurmanız Önemlidir. Veri Girişinden Sonra Güncelle Butonuna Tıklayarak İşlemi Tamamlayabilirsiniz.</p>
+
+                <form method="post">
+                    <input type="hidden" asp-for="PricingID">
+                    <div class="form-group">
+                        <label>Ödeme Türü Başlığı</label>
+                        <input type="text" class="form-control" placeholder="Ödeme Türünün Adını Giriniz(Saatlik,Günlük,Haftalık,Aylık)" asp-for="Name">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary waves-effect waves-light">Ödeme Türü Bilgisini Güncelle</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+

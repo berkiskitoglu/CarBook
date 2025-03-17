@@ -1,0 +1,43 @@
+﻿@model CreatePricingDto
+
+@{
+    ViewData["Title"] = "CreatePricing";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+
+
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title">Yeni Ödeme Türü Girişi</h4>
+                <p class="card-subtitle mb-4">Ödeme Türü İle İlgili Temel Özellikleri Eksiksiz Doldurmanız Önemlidir. Veri Girişinden Sonra Kaydet Butonuna Tıklayarak İşlemi Tamamlayabilirsiniz.</p>
+
+                <form method="post">
+
+                    <div class="form-group">
+                        <label>Ödeme Türü Başlığı</label>
+                        <input type="text" class="form-control" placeholder="Ödeme Türünün Adını Giriniz(Saatlik,Günlük,Haftalık,Aylık)" asp-for="Name">
+                    </div>
+            
+
+
+
+                    <button type="submit" class="btn btn-primary waves-effect waves-light">Ödeme Türü Bilgisini Kaydet</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
