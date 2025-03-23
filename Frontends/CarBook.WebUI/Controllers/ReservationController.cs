@@ -1,23 +1,28 @@
 ﻿using CarBook.Dto.LocationDtos;
+using CarBook.Dto.ReservationDtos;
+using CarBook.Dto.TestimonialDtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using System.Net.Http;
+using System.Text;
 
 namespace CarBook.WebUI.Controllers
 {
-    public class DefaultController : Controller
+    public class ReservationController : Controller
     {
-
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public DefaultController(IHttpClientFactory httpClientFactory)
+        public ReservationController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
-
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int id)
         {
+            ViewBag.v1 = "Araç Kiralama";
+            ViewBag.v2 = "Araç Rezervasyon Formu";
+            ViewBag.v3 = id;
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("https://localhost:7117/api/Locations");
 
@@ -30,20 +35,23 @@ namespace CarBook.WebUI.Controllers
                                                 Value = x.LocationID.ToString()
                                             }).ToList();
             ViewBag.v = values2;
+
+         
             return View();
-
-
         }
         [HttpPost]
-        public IActionResult Index(string book_pick_date,string book_off_date,string time_pick,string time_off,string locationID)
+        public async Task<IActionResult> Index(CreateReservationDto createReservationDto)
         {
-            TempData["book_pick_date"] = book_pick_date;
-            TempData["book_off_date"] = book_off_date;
-            TempData["time_pick"] = time_pick;
-            TempData["time_off"] = time_off;
-            TempData["locationID"] = locationID;
-            return RedirectToAction("Index","RentACarList");
+            
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(createReservationDto);
+            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PostAsync("https://localhost:7117/api/Reservations", stringContent);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index", "Default");
+            }
+            return View();
         }
-
     }
 }
