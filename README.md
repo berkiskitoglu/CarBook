@@ -43,7 +43,7 @@ Bu proje, ASP.NET Core 9.0 Web API ve MVC ile geliştirilmiştir ve Onion Archit
 
 ## 🖼️ Proje Görselleri
 ![](https://github.com/berkiskitoglu/CarBook/blob/master/img/veritabani.png)
-![](https://github.com/berkiskitoglu/CarBook/blob/master/img/arac-1.png)
+![](https://github.com/berkiskitoglu/CarBook/blob/master/anasayfa.png)
 ![](https://github.com/berkiskitoglu/CarBook/blob/master/img/arac-2.png)
 ![](https://github.com/berkiskitoglu/CarBook/blob/master/img/arac-3.png)
 ![](https://github.com/berkiskitoglu/CarBook/blob/master/img/arac-4.png)
