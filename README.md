@@ -42,4 +42,11 @@ Bu proje, ASP.NET Core 9.0 Web API ve MVC ile geliştirilmiştir ve Onion Archit
 - **Json Web Token (JWT)**: Kullanıcı güvenliğini sağlamak amacıyla, kimlik doğrulama işlemleri JWT ile yapılmış, güvenli erişim sağlanmıştır.
 
 ## 🖼️ Proje Görselleri
+![](https://github.com/berkiskitoglu/CarBook/blob/master/img/veritabani.png)
+![](https://github.com/berkiskitoglu/CarBook/blob/master/img/arac-1.png)
+![](https://github.com/berkiskitoglu/CarBook/blob/master/img/arac-2.png)
+![](https://github.com/berkiskitoglu/CarBook/blob/master/img/arac-3.png)
+![](https://github.com/berkiskitoglu/CarBook/blob/master/img/arac-4.png)
+![](https://github.com/berkiskitoglu/CarBook/blob/master/img/arac-5.png)
+![](https://github.com/berkiskitoglu/CarBook/blob/master/img/arac-6.png)
 
