@@ -28,5 +28,7 @@ namespace CarBook.WebUI.ViewComponents.BlogViewComponents
 
             return View();
         }
+
+
     }
 }

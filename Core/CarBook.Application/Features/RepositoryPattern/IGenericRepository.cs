@@ -15,5 +15,7 @@ namespace CarBook.Application.Features.RepositoryPattern
         T GetById(int id);
 
         List<T> GetCommentsByBlogId(int id);
+        int GetCountCommentByBlog(int id);
+
     }
 }

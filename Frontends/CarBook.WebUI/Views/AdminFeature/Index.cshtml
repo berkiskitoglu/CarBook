@@ -1,4 +1,6 @@
-﻿@model List<ResultFeatureDto>
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<ResultFeatureDto>
 
 @{
     ViewData["Title"] = "Index";
@@ -41,7 +43,15 @@
                             </table>
                             <a href="/AdminFeature/CreateFeature/" class="btn btn-outline-primary">Yeni Özellik Girişi</a>
                         </div>
-
+                        @Html.PagedListPager((IPagedList)Model, p => Url.Action("Index", new { p }),
+                                 new PagedListRenderOptions
+                        {
+                            DisplayLinkToPreviousPage = PagedListDisplayMode.Never,
+                            DisplayLinkToNextPage = PagedListDisplayMode.Never,
+                            LiElementClasses = new[] { "page-item" },
+                            PageClasses = new[] { "page-link" },
+                            UlElementClasses = new[] { "pagination", "justify-content-center" }
+                        })
                     </div>
                 </div>
 

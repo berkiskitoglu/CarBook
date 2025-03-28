@@ -1,4 +1,6 @@
-﻿@model List<ResultBrandDto>
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<ResultBrandDto>
 
 @{
     ViewData["Title"] = "Index";
@@ -50,7 +52,15 @@
 
 
                         </div>
-
+                        @Html.PagedListPager((IPagedList)Model, p => Url.Action("Index", new { p }),
+                                 new PagedListRenderOptions
+                        {
+                            DisplayLinkToPreviousPage = PagedListDisplayMode.Never,
+                            DisplayLinkToNextPage = PagedListDisplayMode.Never,
+                            LiElementClasses = new[] { "page-item" },
+                            PageClasses = new[] { "page-link" },
+                            UlElementClasses = new[] { "pagination", "justify-content-center" }
+                        })
                     </div>
 
                 </div>
