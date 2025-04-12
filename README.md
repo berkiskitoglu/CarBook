@@ -34,7 +34,7 @@ Bu proje, ASP.NET Core 9.0 Web API ve MVC ile geliştirilmiştir ve Onion Archit
 ## 🛠️ Teknik Özellikler
 
 - **MSSQL Veritabanı**: SQL Server, veritabanı yönetimi ve işlemleri için kullanılmıştır. Güçlü veri tutarlılığı ve işlem desteği sunar.
-- **ASP.NET Core 9.0**: Uygulama backend'i, yüksek performans ve modüler yapı sağlayan ASP.NET Core 8.0 ile geliştirilmiştir.
+- **ASP.NET Core 9.0**: Uygulama backend'i, yüksek performans ve modüler yapı sağlayan ASP.NET Core 9.0 ile geliştirilmiştir.
 - **Postman**: API dokümantasyonu ve test işlemleri için  Postman kullanılarak API'lerin doğruluğu ve işlevselliği sağlanmıştır.
 - **Onion Architecture**: Uygulama, bağımsız katmanlar ve açık veri akışları kullanılarak tasarlanmış, bakım ve genişletilebilirlik açısından güçlü bir yapı oluşturulmuştur.
 - **CQRS ve Mediator**: Komut ve sorguların ayrılması ile daha etkili veri yönetimi sağlanmış, uygulama içindeki iş akışları Mediator desenini kullanarak düzenlenmiştir.
